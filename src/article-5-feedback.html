@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Feedback You're Not Getting and How to Ask for It | Francis</title>
+<meta name="description" content="Most workplace feedback is too vague to be useful. Learn why managers withhold honest input and how to ask questions that get real answers.">
+ <link href="./output.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  * { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #0a0f1e; color: #e2e8f0; }
+  .font-display { font-family: 'Playfair Display', serif; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #60a5fa; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .tag { background: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.2); color: #93c5fd; }
+  .btn-primary { background: #2563eb; transition: background 0.2s ease; }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-outline { border: 1px solid rgba(96, 165, 250, 0.4); color: #93c5fd; transition: all 0.2s ease; }
+  .btn-outline:hover { background: rgba(96, 165, 250, 0.1); }
+  .article-body h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: #f1f5f9; margin: 2.5rem 0 1rem; }
+  .article-body h3 { font-size: 1.1rem; font-weight: 600; color: #93c5fd; margin: 1.8rem 0 0.75rem; }
+  .article-body p { color: #94a3b8; line-height: 1.9; margin-bottom: 1.2rem; font-size: 1.05rem; }
+  .article-body strong { color: #e2e8f0; font-weight: 600; }
+  .pull-quote { border-left: 3px solid #3b82f6; padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(96,165,250,0.05); border-radius: 0 8px 8px 0; }
+  .pull-quote p { color: #93c5fd; font-size: 1.15rem; font-style: italic; margin: 0; }
+  .source-tag { background: rgba(96,165,250,0.08); border: 1px solid rgba(96,165,250,0.15); color: #60a5fa; font-size: 0.75rem; padding: 2px 10px; border-radius: 20px; display: inline-block; margin-left: 6px; vertical-align: middle; }
+  .script-box { background: rgba(96,165,250,0.05); border: 1px solid rgba(96,165,250,0.2); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .script-box p { color: #bfdbfe; margin: 0; font-size: 0.95rem; }
+  .compare-box { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+  .compare-weak { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.2); border-radius: 10px; padding: 1rem 1.25rem; }
+  .compare-strong { background: rgba(96,165,250,0.05); border: 1px solid rgba(96,165,250,0.2); border-radius: 10px; padding: 1rem 1.25rem; }
+  .compare-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .compare-weak .compare-label { color: #f87171; }
+  .compare-strong .compare-label { color: #60a5fa; }
+  .compare-weak p, .compare-strong p { font-size: 0.9rem; margin: 0; }
+  .stat-box { background: rgba(96,165,250,0.05); border: 1px solid rgba(96,165,250,0.15); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; display: flex; align-items: center; gap: 1rem; }
+  .stat-number { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: #60a5fa; white-space: nowrap; }
+</style>
+</head>
+<body class="antialiased">
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background-color: rgba(10, 15, 30, 0.95); border-bottom: 1px solid rgba(96, 165, 250, 0.1);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-display text-xl text-white font-bold">Francis<span class="text-blue-400">.</span></a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html#about" class="nav-link text-slate-300 hover:text-white text-sm font-medium">About</a>
+      <a href="index.html#articles" class="nav-link text-slate-300 hover:text-white text-sm font-medium">Articles</a>
+      <a href="index.html#contact" class="btn-primary text-white text-sm font-medium px-5 py-2 rounded-full">Contact Me</a>
+    </div>
+    <a href="index.html#articles" class="md:hidden btn-outline px-4 py-2 rounded-full text-xs font-medium">Back</a>
+  </div>
+</nav>
+<section class="pt-32 pb-12" style="background: linear-gradient(180deg, #0d1326 0%, #0a0f1e 100%);">
+  <div class="max-w-3xl mx-auto px-6">
+    <a href="index.html#articles" class="inline-flex items-center gap-2 text-blue-400 text-sm font-medium mb-8 hover:text-blue-300">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      Back to Articles
+    </a>
+    <div class="tag inline-block px-3 py-1 rounded-full text-xs mb-5">Communication</div>
+    <h1 class="font-display text-4xl md:text-5xl text-white font-bold leading-tight mb-6">The Feedback You're Not Getting and How to Ask for It</h1>
+    <p class="text-slate-400 text-lg leading-relaxed mb-8">Most workplace feedback is too vague to be useful. Learn why managers withhold honest input and how to ask questions that get real answers.</p>
+    <div class="flex flex-wrap items-center gap-4 pb-8" style="border-bottom: 1px solid rgba(96,165,250,0.1);">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-blue-300" style="background: rgba(96,165,250,0.15);">F</div>
+        <div><p class="text-white text-sm font-medium">Francis</p><p class="text-slate-500 text-xs">Professional Writer</p></div>
+      </div>
+      <span class="text-slate-500 text-sm">April 2026</span>
+      <span class="text-slate-500 text-sm">1,150 words</span>
+      <span class="text-slate-500 text-sm">6 min read</span>
+    </div>
+  </div>
+</section>
+<article class="py-12">
+  <div class="max-w-3xl mx-auto px-6 article-body">
+    <p>If your manager told you last quarter that you are doing great, that might not mean what you think it means. "You're doing great" is one of the most common pieces of feedback professionals receive. It is also one of the least useful. It tells you nothing about what to do more of, what to stop doing, or where the ceiling on your current performance actually is.</p>
+    <p>The problem is not that your manager is being dishonest. The problem is that most managers default to positive, vague feedback because specific, honest feedback is harder to deliver, harder to receive, and rarely feels worth the discomfort. You can change that. But you have to ask differently.</p>
+
+    <h2>Why Most Workplace Feedback Is Useless</h2>
+    <h3>The politeness problem</h3>
+    <p>Workplace feedback in most organizations is filtered through several layers of social consideration before it reaches you. A Harvard Business Review analysis <span class="source-tag">hbr.org</span> of workplace feedback found that the majority of managers describe giving honest feedback as one of the most difficult parts of their role. The result is what researchers call "feedback inflation," where actual performance concerns are consistently reframed as minor areas for growth.</p>
+    <h3>What "you're doing great" actually means</h3>
+    <p>In most cases, it means: you are not causing a problem significant enough to make this conversation worth the discomfort. That is not a compliment. It is an absence of complaint. Real feedback, the kind that accelerates development, is specific, behavioral, and tied to observable outcomes.</p>
+
+    <div class="pull-quote">
+      <p>Vague feedback is not feedback. It is politeness.</p>
+    </div>
+
+    <h2>Why Managers Withhold Honest Feedback</h2>
+    <h3>Fear of conflict</h3>
+    <p>Most managers are not trained to give feedback. They are promoted for individual performance and then handed a team. According to Gallup's workplace research <span class="source-tag">gallup.com</span>, fewer than 25 percent of employees strongly agree that their manager provides meaningful feedback.</p>
+
+    <div class="stat-box">
+      <span class="stat-number">25%</span>
+      <p style="margin:0; color: #94a3b8; font-size: 0.95rem;">The share of employees who say their manager gives them meaningful feedback. The gap is not a motivation problem. It is a skill and comfort problem.</p>
+    </div>
+
+    <h3>The MUM effect</h3>
+    <p>Organizational psychologists have documented a phenomenon called the MUM effect (Minimizing Unpleasant Messages), where communicators consistently soften, delay, or omit negative information to protect the feelings of the recipient. Research published in the Journal of Applied Psychology <span class="source-tag">apa.org</span> found that this effect is especially pronounced in hierarchical relationships, meaning managers withhold more from direct reports than from peers.</p>
+
+    <h2>How to Ask Questions That Get Real Answers</h2>
+    <h3>Replace broad questions with specific ones</h3>
+    <div class="compare-box">
+      <div class="compare-weak">
+        <p class="compare-label">Too broad</p>
+        <p style="color:#fca5a5;">"How am I doing?"</p>
+      </div>
+      <div class="compare-strong">
+        <p class="compare-label">Specific</p>
+        <p style="color:#bfdbfe;">"In the last project, what's one thing I did that you'd want to see more of, and one thing you'd want me to do differently?"</p>
+      </div>
+    </div>
+    <p>The second question is bounded, specific, and behavioral. It signals that you want real input, not reassurance.</p>
+
+    <h3>Use the "What's one thing" framework</h3>
+    <p>Kim Scott, author of Radical Candor <span class="source-tag">book</span>, recommends asking for one specific piece of critical feedback rather than general input.</p>
+    <div class="script-box">
+      <p>"What's one thing I could do differently that would make me more effective in this role?"</p>
+    </div>
+    <p>One thing is low-stakes enough that managers feel comfortable answering. It is specific enough that the answer is useful.</p>
+
+    <h3>Ask about behaviors, not traits</h3>
+    <div class="compare-box">
+      <div class="compare-weak">
+        <p class="compare-label">Trait question</p>
+        <p style="color:#fca5a5;">"Am I a good communicator?"</p>
+      </div>
+      <div class="compare-strong">
+        <p class="compare-label">Behavior question</p>
+        <p style="color:#bfdbfe;">"In the last meeting with the client, was there a moment where my communication could have been clearer?"</p>
+      </div>
+    </div>
+
+    <h2>How to Handle Feedback That Stings</h2>
+    <h3>Your first reaction will be wrong</h3>
+    <p>When someone tells you something critical about your work, your first reaction is almost always defensive. That is normal. It is also not useful. Before you respond, take a breath. Say "thank you, that's helpful." Give yourself 24 hours before you decide how much weight to give the feedback.</p>
+    <h3>When to push back and when to absorb</h3>
+    <p>Pushback is appropriate when feedback is based on incomplete information. It is not appropriate as a first response to anything uncomfortable. If you push back, do it with questions, not arguments.</p>
+    <div class="script-box">
+      <p>"Can you help me understand what you observed that led to that conclusion?"</p>
+    </div>
+
+    <h2>Building a Feedback Loop That Works Long-Term</h2>
+    <h3>Make it a regular habit, not a one-time event</h3>
+    <p>Asking for feedback once signals that you are trying. Asking for it consistently signals that you are the kind of professional who uses input to improve. That reputation, over time, changes how people talk about you when you are not in the room.</p>
+    <h3>Track what you hear and what you change</h3>
+    <p>Keep a short log of feedback you receive and what you did with it. Review it quarterly. This keeps you accountable to acting on input and gives you concrete evidence of growth to reference in performance reviews and promotion conversations.</p>
+
+    <h2>A Real Example: Feedback That Led to a Promotion</h2>
+    <p>A senior analyst at a consulting firm felt stuck at her level despite strong technical output. On the advice of her mentor, she began asking one peer per month for specific feedback on her communication and presentation style. Over six months, a consistent theme emerged: she was clear in writing but difficult to follow in live presentations.</p>
+    <p>She hired a presentation coach, practiced in low-stakes internal meetings, and tracked her improvement. At her next performance review, she brought her feedback log as evidence of intentional development. Her manager was visibly impressed. She received her promotion three months later.</p>
+    <p>The feedback was always available. She just had to ask for it the right way.</p>
+
+    <div class="pull-quote">
+      <p>Vague feedback is not feedback. It is politeness. If you are not hearing specific, behavioral input, it is not because there is nothing to say.</p>
+    </div>
+
+    <p>Start with one question in your next one-on-one: "What's one thing I could do differently that would make me more effective?" Write down whatever you hear. Then act on it.</p>
+    <p><strong>That is where growth actually starts.</strong></p>
+  </div>
+</article>
+<section class="py-16" style="background: #0d1326; border-top: 1px solid rgba(96,165,250,0.1);">
+  <div class="max-w-3xl mx-auto px-6 text-center">
+    <h2 class="font-display text-3xl text-white font-bold mb-4">Keep Reading</h2>
+    <a href="index.html#articles" class="btn-primary text-white font-medium px-8 py-3 rounded-full text-sm inline-block">View All Articles</a>
+  </div>
+</section>
+<footer style="background-color: #0a0f1e; border-top: 1px solid rgba(96,165,250,0.1);">
+  <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+    <p class="font-display text-lg text-white font-bold">Francis<span class="text-blue-400">.</span></p>
+    <p class="text-slate-500 text-sm">© 2026 Francis Developer Portfolio. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <a href="index.html" class="text-slate-400 hover:text-white text-sm">Home</a>
+      <a href="index.html#articles" class="text-slate-400 hover:text-white text-sm">Articles</a>
+      <a href="index.html#contact" class="text-slate-400 hover:text-white text-sm">Contact</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

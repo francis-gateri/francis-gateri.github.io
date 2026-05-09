@@ -1,0 +1,542 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francis Gateri | Writer & Front End Developer</title>
+<meta name="description" content="Francis Gateri is a professional writer and front end developer based in Nairobi. I help businesses communicate clearly online. I write the content and build the website.">
+  <link href="./output.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+  * { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background-color: #0a0f1e; color: #e2e8f0; }
+  .font-display { font-family: 'Playfair Display', serif; }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #60a5fa; transition: width 0.3s ease; }
+  .nav-link:hover::after { width: 100%; }
+  .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(96, 165, 250, 0.1); }
+  .hero-gradient { background: linear-gradient(135deg, #0a0f1e 0%, #0f172a 50%, #0a0f1e 100%); }
+  .glow { text-shadow: 0 0 40px rgba(96, 165, 250, 0.3); }
+  .tag { background: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.2); color: #93c5fd; }
+  .tag-green { background: rgba(52, 211, 153, 0.1); border: 1px solid rgba(52, 211, 153, 0.2); color: #6ee7b7; }
+  .btn-primary { background: #2563eb; transition: background 0.2s ease, transform 0.1s ease; }
+  .btn-primary:hover { background: #1d4ed8; transform: translateY(-1px); }
+  .btn-outline { border: 1px solid rgba(96, 165, 250, 0.4); color: #93c5fd; transition: all 0.2s ease; }
+  .btn-outline:hover { background: rgba(96, 165, 250, 0.1); border-color: #60a5fa; }
+  .btn-github { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #e2e8f0; transition: all 0.2s ease; }
+  .btn-github:hover { background: rgba(255,255,255,0.1); }
+  .mobile-menu { display: none; }
+  .mobile-menu.open { display: flex; }
+  input, textarea, select { background: rgba(255,255,255,0.05); border: 1px solid rgba(96, 165, 250, 0.2); color: #e2e8f0; outline: none; transition: border-color 0.2s ease; }
+  input:focus, textarea:focus, select:focus { border-color: #60a5fa; }
+  input::placeholder, textarea::placeholder { color: #64748b; }
+  .lane-writer { border-top: 2px solid #3b82f6; }
+  .lane-dev { border-top: 2px solid #34d399; } 
+  .skill-pill { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 10px 16px; font-size: 0.85rem; color: #cbd5e1; }
+  .skill-pill svg { flex-shrink: 0; }
+  .skill-group-title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+  .testimonial-card { background: rgba(96,165,250,0.03); border: 1px solid rgba(96,165,250,0.12); border-radius: 16px; padding: 28px; position: relative; }
+  .testimonial-card::before { content: '"'; font-family: 'Playfair Display', serif; font-size: 5rem; color: rgba(96,165,250,0.15); position: absolute; top: -10px; left: 20px; line-height: 1; }
+  .availability-badge { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.25); color: #6ee7b7; }
+  .project-img { background: linear-gradient(135deg, #1e3a5f, #0f2744); }
+  .social-link { display: inline-flex; align-items: center; gap: 8px; color: #94a3b8; font-size: 0.85rem; transition: color 0.2s ease; }
+  .social-link:hover { color: #e2e8f0; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md" style="background-color: rgba(10, 15, 30, 0.95); border-bottom: 1px solid rgba(96, 165, 250, 0.1);">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="font-display text-xl text-white font-bold tracking-tight">Francis Gateri<span class="text-blue-400">.</span></a>
+    <div class="hidden md:flex items-center gap-7">
+      <a href="#about" class="nav-link text-slate-300 hover:text-white text-sm font-medium transition-colors">About</a>
+      <a href="#articles" class="nav-link text-slate-300 hover:text-white text-sm font-medium transition-colors">Articles</a>
+      <a href="#projects" class="nav-link text-slate-300 hover:text-white text-sm font-medium transition-colors">View my Projects</a>
+
+      <a href="#services" class="nav-link text-slate-300 hover:text-white text-sm font-medium transition-colors">My Services</a>
+      <a href="https://github.com/francis-gateri" target="_blank" class="btn-github inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a href="#contact" class="btn-primary text-white text-sm font-medium px-5 py-2 rounded-full">Hire Me</a>
+    </div>
+    <button onclick="toggleMenu()" class="md:hidden text-slate-300 hover:text-white">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+  <div id="mobile-menu" class="mobile-menu md:hidden flex-col px-6 pb-4 gap-4" style="border-top: 1px solid rgba(96,165,250,0.1);">
+    <a href="#about" onclick="toggleMenu()" class="text-slate-300 hover:text-white text-sm font-medium py-2">About</a>
+    <a href="#articles" onclick="toggleMenu()" class="text-slate-300 hover:text-white text-sm font-medium py-2">Writing</a>
+    <a href="#projects" onclick="toggleMenu()" class="text-slate-300 hover:text-white text-sm font-medium py-2">Projects</a>
+    <a href="#blog" onclick="toggleMenu()" class="text-slate-300 hover:text-white text-sm font-medium py-2">Blog</a>
+    <a href="#services" onclick="toggleMenu()" class="text-slate-300 hover:text-white text-sm font-medium py-2">Services</a>
+    <a href="https://github.com/francis-gateri" target="_blank" class="text-slate-300 hover:text-white text-sm font-medium py-2">GitHub</a>
+    <a href="#contact" onclick="toggleMenu()" class="btn-primary text-white text-sm font-medium px-5 py-2 rounded-full text-center">Hire Me</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero-gradient min-h-screen flex items-center pt-20">
+  <div class="max-w-6xl mx-auto px-6 py-24">
+    <div class="max-w-3xl">
+      <div class="availability-badge inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Open to work
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl text-white font-bold leading-tight mb-6 glow">
+        Francis<br><span class="text-blue-400">Gateri.</span>
+      </h1>
+      <p class="text-slate-300 text-xl md:text-2xl font-medium mb-4">
+        Frontend Developer Building Clear and Responsive Websites.
+      </p>
+      <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-2xl">
+        I design and build websites using HTML, CSS, Tailwind and JavaScript. I 
+        focus on clean structure, usability, and performance.
+      </p>
+      <div class="flex flex-wrap gap-4 mb-12">
+        <a href="#articles" class="btn-primary text-white font-medium px-8 py-3 rounded-full text-sm">Read My Articles</a>
+        <a href="#projects" class="btn-outline font-medium px-8 py-3 rounded-full text-sm">View Projects</a>
+        <a href="https://www.linkedin.com/in/francis-gateri-7266a1302/" target="_blank" class="btn-github inline-flex items-center gap-2 font-medium px-8 py-3 rounded-full text-sm">
+          <svg width="16" height="16" fill="#0077b5" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24" style="background-color: #0d1326;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-start">
+      <div>
+       <img src="./images/profile.jpg" alt="Francis Gateri - Writer and Front End Developer"
+        class="w-full aspect-square object-cover object-top rounded-2xl" style="border: 1px solid rgba(96,165,250,0.15);">
+      </div>
+      <div>
+        <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">About Me</p>
+        <p class="text-slate-400 leading-relaxed mb-5">I am Francis Gateri, a professional writer and front end developer 
+          based in Nairobi, Kenya. I help businesses and individuals build websites 
+          that not only look good, but communicate effectively.</p>
+        <p class="text-slate-400 leading-relaxed mb-5"> Many websites look good but fail to communicate. Others have strong content but poor structure. I work on both at the same time, so the final
+          result is not just a website, but a clear and usable experience.</p>
+        <p class="text-slate-400 leading-relaxed mb-5">I start by understanding what the website needs to communicate,
+           then structure the content and layout in a way that is easy to read, easy to navigate, and works well on all devices.</p>
+        <p class="text-slate-400 leading-relaxed mb-8">My work is best suited for portfolios, landing pages, and content-focused websites where 
+          ,clarity and presentation directly affect how users respond.</p>
+        <div class="grid grid-cols-2 gap-4 mb-8">
+          <div class="rounded-xl p-4 lane-writer" style="background: rgba(59,130,246,0.05);">
+            <p class="text-blue-400 skill-group-title">Writing</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag px-2 py-1 rounded-full text-xs">Long-Form Articles</span>
+              <span class="tag px-2 py-1 rounded-full text-xs">SEO Content</span>
+              <span class="tag px-2 py-1 rounded-full text-xs">Content Strategy</span>
+              <span class="tag px-2 py-1 rounded-full text-xs">Research Writing</span>
+              <span class="tag px-2 py-1 rounded-full text-xs">Editing</span>
+            </div>
+          </div>
+          <div class="rounded-xl p-4 lane-dev" style="background: rgba(52,211,153,0.05);">
+            <p class="text-emerald-400 skill-group-title">Development</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag-green px-2 py-1 rounded-full text-xs">HTML</span>
+              <span class="tag-green px-2 py-1 rounded-full text-xs">CSS</span>
+              <span class="tag-green px-2 py-1 rounded-full text-xs">Tailwind CSS</span>
+              <span class="tag-green px-2 py-1 rounded-full text-xs">JavaScript</span>
+              <span class="tag-green px-2 py-1 rounded-full text-xs">Git & GitHub</span>
+            </div>
+          </div>
+        </div>
+        <a href="#contact" class="btn-primary text-white font-medium px-8 py-3 rounded-full text-sm inline-block">Work With Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-24" style="background-color: #0a0f1e;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">Skills</p>
+      <h2 class="font-display text-4xl text-white font-bold mb-4">How I Deliver Results</h2>
+      <p class="text-slate-400 max-w-xl mx-auto">I combine structured writing and clean frontend development to build websites that are clear, usable, and effective.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Writing Skills -->
+      <div class="rounded-2xl p-8 lane-writer" style="background: #0d1326; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(96,165,250,0.1);">
+            <svg width="20" height="20" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg">Content that communicates clearly</h3>
+            <p class="text-slate-500 text-xs"> Writing focused on clarity, structure, and real user understanding</p>
+          </div>
+        </div>
+        
+       <ul class="space-y-3 text-slate-300 text-sm">
+       <li>• Clear, structured long-form articles</li>
+          <Br>
+           <li>• SEO-focused content built around real search intent</li>
+           </Br>
+          <li>• Content strategy and topic planning</li><Br>
+
+           <li>• Research-backed writing and editing</li>
+          </Br>
+          <li>• Articles designed for readability and engagement</li>
+           </ul>
+
+      </div>
+      <div class="rounded-2xl p-8 lane-dev" style="background: #0d1326; border: 1px solid rgba(52,211,153,0.1);">
+  
+  <div class="mb-6">
+    <h3 class="text-white font-semibold text-lg mb-2">Websites That Are Clean and Easy to Use</h3>
+    <p class="text-slate-400 text-sm">
+      Built with simplicity, responsiveness, and performance in mind
+    </p>
+  </div>
+
+  <!-- STRUCTURE & LAYOUT -->
+  <div class="mb-6">
+    <p class="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3">
+      Structure & Layout
+    </p>
+    <ul class="space-y-2 text-slate-300 text-sm">
+      <li>• Clean, semantic HTML structure</li>
+      <li>• Responsive layouts that work on all devices</li>
+      <li>• Consistent spacing and visual hierarchy</li>
+    </ul>
+  </div>
+
+  <!-- USER EXPERIENCE -->
+  <div>
+    <p class="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3">
+      User Experience
+    </p>
+    <ul class="space-y-2 text-slate-300 text-sm">
+      <li>• Smooth navigation and interaction</li>
+      <li>• Simple, functional JavaScript where needed</li>
+      <li>• Fast-loading pages with minimal complexity</li>
+    </ul>
+  </div>
+
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- Articles -->
+<section id="articles" class="py-24" style="background-color: #0d1326;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">Writing Portfolio</p>
+      <h2 class="font-display text-4xl text-white font-bold mb-4">Featured Articles</h2>
+      <p class="text-slate-400 max-w-xl mx-auto">Research-backed career advice for professionals who want practical guidance, not generic motivation.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+  <div class="flex items-center gap-2 mb-4">
+    <div class="tag inline-block px-3 py-1 rounded-full text-xs">Freelance Writing</div>
+    <span class="text-slate-500 text-xs">Personal Story</span>
+  </div>
+  <h3 class="text-white font-semibold text-lg mb-3 leading-snug">How I Started My Freelance Content Writing Career in 2025</h3>
+  <p class="text-slate-400 text-sm leading-relaxed mb-5">A personal story and step-by-step guide on breaking into freelance content writing in Kenya. Real platforms, real rates, real lessons.</p>
+  <div class="flex items-center justify-between">
+    <span class="text-slate-500 text-xs">8 min read</span>
+    <a href="article-6-freelance-writing.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+  </div>
+</div>
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="tag inline-block px-3 py-1 rounded-full text-xs">Career Growth</div>
+          <span class="text-slate-500 text-xs">Informational</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-3 leading-snug">How to Ask for a Promotion Without Feeling Awkward</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">A step-by-step guide to timing, framing, and presenting your case with confidence. Includes real scripts and how to handle every manager response.</p>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-500 text-xs">6 min read</span>
+          <a href="article-1-promotion.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="tag inline-block px-3 py-1 rounded-full text-xs">Personal Branding</div>
+          <span class="text-slate-500 text-xs">Instructional</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-3 leading-snug">Why Your LinkedIn Profile Is Costing You Opportunities</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Recruiters spend 7 seconds on your profile. Learn the five mistakes that drive them away and how to fix each one today.</p>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-500 text-xs">5 min read</span>
+          <a href="article-2-linkedin.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="tag inline-block px-3 py-1 rounded-full text-xs">Resilience</div>
+          <span class="text-slate-500 text-xs">Informational</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-3 leading-snug">How to Recover Professionally After a Public Mistake at Work</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Your response matters more than the mistake itself. Here are the exact steps to own it, fix it, and rebuild your reputation fast.</p>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-500 text-xs">6 min read</span>
+          <a href="article-3-mistake.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="tag inline-block px-3 py-1 rounded-full text-xs">Networking</div>
+          <span class="text-slate-500 text-xs">Instructional</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-3 leading-snug">How to Build a Professional Network When You Hate Networking</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Five low-pressure tactics that work even if you hate small talk. Backed by research on introversion and professional relationship building.</p>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-500 text-xs">5 min read</span>
+          <a href="article-4-networking.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+        </div>
+      </div>
+      <div class="card rounded-2xl p-6" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="tag inline-block px-3 py-1 rounded-full text-xs">Communication</div>
+          <span class="text-slate-500 text-xs">Educational</span>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-3 leading-snug">The Feedback You're Not Getting and How to Ask for It</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Most workplace feedback is too vague to be useful. Learn why managers withhold honest input and how to ask questions that get real answers.</p>
+        <div class="flex items-center justify-between">
+          <span class="text-slate-500 text-xs">6 min read</span>
+          <a href="article-5-feedback.html" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Read Article</a>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="py-24" style="background-color: #0a0f1e;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-emerald-400 text-sm font-medium tracking-widest uppercase mb-3">Dev Portfolio</p>
+      <h2 class="font-display text-4xl text-white font-bold mb-4">Projects I Have Built</h2>
+      <p class="text-slate-400 max-w-xl mx-auto">Real projects built and deployed. Each one demonstrates a specific technical capability.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card rounded-2xl overflow-hidden" style="background: #0d1326; border: 1px solid rgba(52,211,153,0.15);">
+        <div class="project-img h-44 flex items-center justify-center relative">
+          <div class="text-center px-6"><p class="text-blue-300 font-display text-2xl font-bold mb-1">Francis Gateri.</p><p class="text-slate-400 text-xs">Portfolio Website</p></div>
+          <div class="absolute top-3 right-3"><span class="tag-green px-2 py-1 rounded-full text-xs">Live</span></div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center gap-2 mb-2">
+            <h3 class="text-white font-semibold">Personal Portfolio Website</h3>
+          </div>
+          <p class="text-slate-500 text-xs mb-3">Portfolio Demonstration. Fully responsive. Deployed on GitHub Pages.</p>
+          <p class="text-slate-400 text-sm leading-relaxed mb-4">Responsive portfolio site built with HTML and Tailwind CSS. Demonstrates responsive navigation, smooth scroll behavior, semantic HTML structure, contact form integration, and GitHub Pages deployment.</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            <span class="tag-green px-2 py-1 rounded text-xs">HTML</span>
+            <span class="tag-green px-2 py-1 rounded text-xs">Tailwind CSS</span>
+            <span class="tag-green px-2 py-1 rounded text-xs">JavaScript</span>
+            <span class="tag-green px-2 py-1 rounded text-xs">GitHub Pages</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="https://francis-gateri.github.io" target="_blank" class="btn-outline px-4 py-2 rounded-full text-xs font-medium">Live Site</a>
+            <a href="https://github.com/francis-gateri/francis-gateri.github.io" target="_blank" class="text-slate-400 hover:text-white text-xs transition-colors flex items-center gap-1">
+              <svg width="12" height="12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View Code
+            </a>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-24" style="background-color: #0d1326;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">Services</p>
+      <h2 class="font-display text-4xl text-white font-bold mb-4">What I Offer</h2>
+      <p class="text-slate-400 max-w-xl mx-auto">Writing and development services for businesses and individuals. Get in touch to discuss scope and rates.</p>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(96,165,250,0.1);"><svg width="22" height="22" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Long-Form Articles</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Research-backed articles of 900 to 1,500 words. Includes SEO keywords, source citations, meta description, and social media blurbs.</p>
+        <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Discuss this →</a>
+      </div>
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 2px solid rgba(96,165,250,0.3);">
+        <div class="tag inline-block px-3 py-1 rounded-full text-xs mb-4">Most Requested</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(96,165,250,0.1);"><svg width="22" height="22" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Content Strategy Package</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Five articles plus a full content plan including topics, outlines, SEO assets, publishing schedule, and promotion tips for each piece.</p>
+        <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Discuss this →</a>
+      </div>
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 1px solid rgba(96,165,250,0.1);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(96,165,250,0.1);"><svg width="22" height="22" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Editing & Review</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Line editing, structural feedback, and a revision checklist for articles or reports you have already drafted.</p>
+        <a href="#contact" class="text-blue-400 text-sm font-medium hover:text-blue-300">Discuss this →</a>
+      </div>
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 1px solid rgba(52,211,153,0.15);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(52,211,153,0.1);"><svg width="22" height="22" fill="none" stroke="#34d399" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Portfolio Website</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Responsive portfolio sites built with HTML and Tailwind CSS. Includes mobile navigation, contact form setup, and GitHub Pages deployment.</p>
+        <a href="#contact" class="text-emerald-400 text-sm font-medium hover:text-emerald-300">Discuss this →</a>
+      </div>
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 1px solid rgba(52,211,153,0.15);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(52,211,153,0.1);"><svg width="22" height="22" fill="none" stroke="#34d399" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Landing Page</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Single-page landing sites for products, services, or events. Fast, clean, and built to convert visitors into leads.</p>
+        <a href="#contact" class="text-emerald-400 text-sm font-medium hover:text-emerald-300">Discuss this →</a>
+      </div>
+      <div class="card rounded-2xl p-8" style="background: #0a0f1e; border: 2px solid rgba(52,211,153,0.3);">
+        <div class="tag-green inline-block px-3 py-1 rounded-full text-xs mb-4">Best Value</div>
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style="background: rgba(52,211,153,0.1);"><svg width="22" height="22" fill="none" stroke="#34d399" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg></div>
+        <h3 class="text-white font-semibold text-lg mb-3">Write + Build Bundle</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-5">Website plus three articles. Your online presence and your content strategy handled together by one person who understands both.</p>
+        <a href="#contact" class="text-emerald-400 text-sm font-medium hover:text-emerald-300">Discuss this →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-24" style="background-color: #0a0f1e;">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16">
+      <div>
+        <p class="text-blue-400 text-sm font-medium tracking-widest uppercase mb-3">Contact</p>
+        <h2 class="font-display text-4xl text-white font-bold mb-6">Let's Work Together</h2>
+        <p class="text-slate-400 leading-relaxed mb-8">Need an article written, a website built, or both? I respond to all messages within 24 hours. Available for freelance projects, entry level roles, and internship opportunities.</p>
+        <div class="space-y-4 mb-8">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(96,165,250,0.1);"><svg width="18" height="18" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
+            <span class="text-slate-300 text-sm">francis@email.com</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(96,165,250,0.1);"><svg width="18" height="18" fill="none" stroke="#60a5fa" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
+            <span class="text-slate-300 text-sm">Nairobi, Kenya</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(96,165,250,0.1);">
+              <svg width="18" height="18" fill="#0077b5" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <a href="https://www.linkedin.com/in/francis-gateri-7266a1302/" target="_blank" class="text-slate-300 text-sm hover:text-white transition-colors">linkedin.com/in/francis-gateri-7266a1302</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: rgba(96,165,250,0.1);">
+              <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <a href="https://github.com/francis-gateri" target="_blank" class="text-slate-300 text-sm hover:text-white transition-colors">github.com/francis-gateri</a>
+          </div>
+        </div>
+        <div class="rounded-xl p-5" style="background: rgba(52,211,153,0.05); border: 1px solid rgba(52,211,153,0.15);">
+          <p class="text-emerald-400 text-xs font-semibold uppercase tracking-widest mb-3">Currently open to</p>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-slate-300 text-sm">Freelance writing and development projects</span></div>
+            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-slate-300 text-sm">Entry level frontend developer roles</span></div>
+            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-slate-300 text-sm">Internship opportunities</span></div>
+            <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span><span class="text-slate-300 text-sm">Remote and hybrid work arrangements</span></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="rounded-2xl p-8" style="background: #0d1326; border: 1px solid rgba(96,165,250,0.1);">
+          <form action="https://formspree.io/f/xdaybngv" method="POST">
+            <div class="space-y-5">
+              <div><label class="text-slate-400 text-sm block mb-2">Your Name</label><input type="text" name="name" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl text-sm" required></div>
+              <div><label class="text-slate-400 text-sm block mb-2">Email Address</label><input type="email" name="email" placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl text-sm" required></div>
+              <div>
+                <label class="text-slate-400 text-sm block mb-2">I need help with</label>
+                <select name="service" class="w-full px-4 py-3 rounded-xl text-sm">
+                  <option value="" style="background:#0d1326;">Select a service</option>
+                  <option value="article" style="background:#0d1326;">Long-Form Article</option>
+                  <option value="strategy" style="background:#0d1326;">Content Strategy Package</option>
+                  <option value="editing" style="background:#0d1326;">Editing & Review</option>
+                  <option value="portfolio" style="background:#0d1326;">Portfolio Website</option>
+                  <option value="landing" style="background:#0d1326;">Landing Page</option>
+                  <option value="bundle" style="background:#0d1326;">Write + Build Bundle</option>
+                  <option value="job" style="background:#0d1326;">Job or Internship Opportunity</option>
+                  <option value="other" style="background:#0d1326;">Other</option>
+                </select>
+              </div>
+              <div><label class="text-slate-400 text-sm block mb-2">Message</label><textarea name="message" rows="4" placeholder="Tell me about your project or opportunity..." class="w-full px-4 py-3 rounded-xl text-sm resize-none" required></textarea></div>
+              <button type="submit" class="btn-primary w-full text-white font-medium py-3 rounded-xl text-sm">Send Message</button>
+              <p class="text-slate-500 text-xs text-center">I respond to all messages within 24 hours.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer style="background-color: #0d1326; border-top: 1px solid rgba(96,165,250,0.1);">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-8">
+      <div>
+        <p class="font-display text-xl text-white font-bold mb-2">Francis Gateri<span class="text-blue-400">.</span></p>
+        <p class="text-slate-400 text-sm mb-4">Front End Developer and Content Writer focused on responsive layouts and structured website communication. Based in Nairobi, Kenya.</p>
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/in/francis-gateri-7266a1302/" target="_blank" class="social-link">
+            <svg width="18" height="18" fill="#0077b5" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/francis-gateri" target="_blank" class="social-link">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div>
+        <p class="text-white text-sm font-semibold mb-4">Quick Links</p>
+        <div class="space-y-2">
+          <a href="#about" class="block text-slate-400 hover:text-white text-sm transition-colors">About</a>
+          <a href="#articles" class="block text-slate-400 hover:text-white text-sm transition-colors">Writing Portfolio</a>
+          <a href="#projects" class="block text-slate-400 hover:text-white text-sm transition-colors">Dev Projects</a>
+          <a href="#blog" class="block text-slate-400 hover:text-white text-sm transition-colors">Blog</a>
+          <a href="#services" class="block text-slate-400 hover:text-white text-sm transition-colors">Services</a>
+          <a href="#contact" class="block text-slate-400 hover:text-white text-sm transition-colors">Contact</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-white text-sm font-semibold mb-4">Profiles</p>
+        <div class="space-y-2">
+          <a href="https://github.com/francis-gateri" target="_blank" class="block text-slate-400 hover:text-white text-sm transition-colors">GitHub</a>
+          <a href="https://www.linkedin.com/in/francis-gateri-7266a1302/" target="_blank" class="block text-slate-400 hover:text-white text-sm transition-colors">LinkedIn</a>
+        </div>
+        <div class="mt-6">
+          <p class="text-white text-sm font-semibold mb-2">Availability</p>
+          <div class="availability-badge inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open to opportunities
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(96,165,250,0.1);" class="pt-6 text-center">
+      <p class="text-slate-500 text-sm">© 2026 Francis Gateri. All rights reserved. Built with HTML and Tailwind CSS.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('mobile-menu');
+  menu.classList.toggle('open');
+}
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  nav.style.borderBottomColor = window.scrollY > 50 ? 'rgba(96, 165, 250, 0.2)' : 'rgba(96, 165, 250, 0.1)';
+});
+</script>
+</body>
+</html>
+
